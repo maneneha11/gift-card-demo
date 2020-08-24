@@ -12,7 +12,7 @@ import org.openqa.selenium.Keys;
 
 public class GcToSomeone {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException{
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\End User\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://gift-cards.phorest.com/salons/demo-us#");
@@ -50,7 +50,19 @@ public class GcToSomeone {
         driver.findElement(By.id("card-security")).sendKeys("999");
         
         //wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("submitButton"))));
-        driver.findElement(By.id("submitButton")).sendKeys(Keys.ENTER);    
+        driver.findElement(By.id("submitButton")).sendKeys(Keys.ENTER); 
+        
+        //verify if the payment was successful
+        Thread.sleep(5000);
+        String result = driver.findElement(By.xpath("//p[@class=\"text-xl font-medium mb-8\"]")).getText();
+        
+        if (result.equals("Payment accepted, thank you!")) {
+        	System.out.println("Payment successfull");
+        }
+        else
+        	System.out.println("There was an error processing the payment. Please check the card details and try again");
+        
+        driver.close();
 	}
 
 }
