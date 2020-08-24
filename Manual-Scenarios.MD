@@ -7,28 +7,28 @@
 
 **Steps**:
 
- - Open the given link.
- - Click to select amount (Eg:50)
- - Add valid data in the following fields :
+ 1. Open the given link.
+ 2. Click to select amount (Eg:50)
+ 3. Add valid data in the following fields :
 	- Your Email Address
 	- Add First Name
 	- Add Last Name
- - Validate Selected amount in (Step 2) is displayed in Total Cost.
- - Click on Checkout
- - Check the Enter Details are correct
- - Click on Confirm Details Button
- - Check the Data on Summary Page
- - Validate Payment Method Page is open
- - Add valid data in the following fields :
+ 4. Check Selected amount in (Step 2) is displayed in Total Cost.
+ 5. Click on Checkout
+ 6. Check the Enter Details are correct
+ 7. Click on Confirm Details Button
+ 8. Check the Data on Summary Page
+ 9. Validate Payment Method Page is open
+ 10. Add valid data in the following fields :
 		- Cardholder Name
 		- Zipcode
 		- Card Number
 		- Expiry
 		- Security Code
- - Click on Submit Button
- - Ensure the message displayed on the confirmation page ”Payment is accepted, Thank you”
- - Ensure unique Gift card code is generated
- - Ensure Confirmation Mail is sent to given Email address
+ 11. Click on Submit Button
+ 12. Ensure the message displayed on the confirmation page ”Payment is accepted, Thank you”
+ 13. Ensure unique Gift card code is generated
+ 14. Ensure Confirmation Mail is sent to given Email address
 
 **Expected Result** :
 
