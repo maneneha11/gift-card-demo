@@ -13,7 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class GcToMyself {
 
 	public static void main(String[] args) throws InterruptedException{
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\End User\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		//please edit this and replace this with path to your chromedriver
+		System.setProperty("webdriver.chrome.driver","C:\\PATH\\TO\\Chromedriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
 		//Open Demo US voucher page
@@ -22,9 +23,9 @@ public class GcToMyself {
 
         // Enter user details and Checkout
 		driver.findElement(By.xpath("//span[@data-value=\"50\"]")).click();
-        driver.findElement(By.xpath("//input[@data-target=\"email.purchaserEmailInput\"]")).sendKeys("maneneha@getnada.com");
-        driver.findElement(By.xpath("//input[@data-target=\"name.purchaserFirstNameInput\"]")).sendKeys("abc");
-        driver.findElement(By.xpath("//input[@data-target=\"name.purchaserLastNameInput\"]")).sendKeys("xyz");
+        driver.findElement(By.xpath("//input[@data-target=\"email.purchaserEmailInput\"]")).sendKeys("testmail@testdomain.com");
+        driver.findElement(By.xpath("//input[@data-target=\"name.purchaserFirstNameInput\"]")).sendKeys("Demo");
+        driver.findElement(By.xpath("//input[@data-target=\"name.purchaserLastNameInput\"]")).sendKeys("Test");
         
         driver.findElement(By.xpath("//button[@data-action=\"checkout#checkoutAction\"]")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -40,7 +41,7 @@ public class GcToMyself {
         wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("card-name"))));
         
         //Enter payment details and submit
-        driver.findElement(By.id("card-name")).sendKeys("abc");
+        driver.findElement(By.id("card-name")).sendKeys("Demo");
         driver.findElement(By.id("card-zip")).sendKeys("92606");
         driver.findElement(By.id("card-number")).sendKeys("4111 1111 1111 1111");
         driver.findElement(By.id("card-expiry")).sendKeys("12/22");
